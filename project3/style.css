@@ -7,11 +7,12 @@ body {
     font-weight: 400;
     line-height: 1.8em;
     color: rgb(6, 6, 6);
+    background-color: #000;
 }
 
 .pimg1 {
     background-image: url(images/image1.png);
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .pimg2 {
@@ -26,7 +27,7 @@ body {
 
 .pimg4 {
     background-image: url(images/image4.jpg);
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .pimg1,
@@ -38,6 +39,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 .ptext {
@@ -45,22 +47,39 @@ body {
     top: 50%;
     width: 100%;
     text-align: center;
-    color: black;
-    font-size: 27px;
+    color: #ffff;
+    font-size: 3em;
     letter-spacing: 8px;
     text-transform: uppercase;
+    animation: glowing 4s infinite;
 }
 
 .textBg {
     background: #313534;
-    color: #fff;
+    color: #fefffd;
     padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(234, 8, 8, 0.7);
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 10px rgba(227, 227, 7, 0.909);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(227, 227, 7, 0.909), 0 0 30px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(227, 227, 7, 0.909);
+    }
 }
 
 .section {
-    padding: 50px 80px;
+    padding: 50px 20px;
     text-align: center;
-    font-family: cormorant infant;
+    font-family: "Cormorant Infant", serif;
+    overflow: hidden;
 }
 
 p.para1:first-letter {
@@ -73,7 +92,7 @@ p.para1:first-letter {
 
 .section-light {
     background-color: #f4f4f4;
-    color: #666;
+    color: #333;
 }
 
 .section-dark {
